@@ -45,13 +45,13 @@
     background-size: cover;
   }
 
-  .about h1 {
+  .about__info h1 {
     font-size: 36px;
     line-height: 76px;
     /*box-shadow: 0 0 10px #444;   /* тень*/
   }
    
-  .about ul {
+  .about__info ul {
     font-size: 22px;
     line-height: 50px;
     padding: 30px 50px 30px 40px; /*top right bottom left*/
@@ -169,15 +169,19 @@
       flex-direction: column;
       padding: 30px 30px 30px 40px; /*top right bottom left*/
   }
-  .about h1 {
-      font-size: 26px;
-      line-height: 40px;
+  .about__info h1 {
+      font-size: 32px;
+      line-height: 30px;
   }
-  .about ul {
+  .about__info ul {
     font-size: 22px;
     line-height: 30px;
     opacity: 0.9; /* прозрачность*/
   }
+
+  .about__info li {
+    padding: 30px ; /*top right bottom left*/
+}
   /* особенности расположения и анимации картинки с солнцем*/
   .about__first-image {
     width: 50px;
@@ -191,7 +195,7 @@
   }
 
   .about__image {
-      width: 50%;
+      width: 80%;
       border-radius: 5px;
   }
 
@@ -206,8 +210,8 @@
     /*padding: 30px 40px 25px 40px;  /*top right bottom left*/
    }
    .projects__header h1{
-    font-size: 26px;
-    line-height: 40px;
+    font-size: 48px;
+    line-height: 30px;
  }
    .projects__img img {
     border-radius: 3px;   /*скругление*/
