@@ -1,0 +1,331 @@
+/*Монитор---------------------------------------------------*/
+@media (min-width: 1000.01px)  {
+  .header__logo {
+    height: 50px;  /*высота логотипа*/ 
+    background-image: none;
+}
+  .header__controls{
+    display: flex;
+    flex-wrap: nowrap ;   /* не переносить элементы*/
+    flex-direction: row;  /* расположение элементов в строку*/
+    font-size: 20px;      /* размер шрифта шапки*/
+  }
+  .header__controls a{
+    display: flex;
+    margin-inline: 10% 10%;   /* relative to the nearest block container's width */
+    text-decoration: none;    /* убираем подчеркивание в ссылках*/
+  }
+  .about__image {
+    width: 60%;         /* ширина картинки*/
+    border-radius: 20px;  /* скругление*/
+  }
+
+  /* особенности расположения и анимации картинки с солнцем*/
+  .about__first-image {
+    width: 100px;
+    height: 100px;
+    animation-name: rotation;
+    animation-duration: 10s;
+    animation-iteration-count:  infinite;
+    animation-timing-function: linear;
+    animation-fill-mode: backwards;
+    position: absolute;
+  }
+
+  .about {
+    display: flex;
+    /*align-items: center;*/
+    /*justify-content: space-around; /*свободное пространство делится поровну между элементами и по половине от этой доли размещается по бокам от каждого элемента*/
+    /* justify-content: space-between; /*крайние элементы прижимаются к краям родителя, оставшиеся выстраиваются внутри контейнера равномерно, 
+    так, чтобы между ними были одинаковые отступы. */
+
+    padding: 30px 40px 30px 40px; /*top right bottom left*/
+    /*background: url('img/back.png') no-repeat;*/
+    background-position: center;
+    background-size: cover;
+  }
+
+  .about h1 {
+    font-size: 36px;
+    line-height: 76px;
+    /*box-shadow: 0 0 10px #444;   /* тень*/
+  }
+   
+  .about ul {
+    font-size: 22px;
+    line-height: 50px;
+    padding: 30px 50px 30px 40px; /*top right bottom left*/
+    opacity: 0.9; /* прозрачность*/
+  }
+
+  .projects {
+    /*background-color: #fff;*/
+    padding: 30px 10px 30px 40px; /*top right bottom left*/
+  }
+
+  .projects__header h1{
+    font-size: 36px;
+    line-height: 76px;
+ }
+
+  .projects__img img{
+    border-radius: 10px;   /*скругление*/
+    box-shadow: 0 0 10px #444;   /* тень*/
+    width: 90%;
+    left:10px;
+}
+
+ .projects table {
+  border-collapse: collapse; /* Убираем двойные линии */
+  width: 100%; /* Ширина таблицы */
+  border-spacing: 2; /* Расстояние между ячейками */
+  }
+
+  .scale {    /*увеличение картинки при наведении*/
+    transition: 1s; /* Время эффекта */
+   }
+   .scale:hover {   /*увеличение картинки при наведении*/
+    transform: scale(2) ; /* Увеличиваем масштаб */
+    transform-origin: left; /*смещаем вправо после увеличения*/
+   }
+
+   .scale__right {    /*увеличение картинки при наведении*/
+    transition: 1s; /* Время эффекта */
+   }
+   .scale__right:hover {   /*увеличение картинки при наведении*/
+    transform: scale(2) ; /* Увеличиваем масштаб */
+    transform-origin: right;/* смещаем влево после увеличения*/
+   }
+
+  footer{
+    font-size: 20px;
+    /*padding: 90px,20px,90px,20px; /*top right bottom left*/
+    font-weight:600;
+}
+ .footer__container{
+    display: flex;  
+    justify-content: center; 
+    align-items: center;
+    justify-content: space-around; /*свободное пространство делится поровну между элементами и по половине от этой доли размещается по бокам от каждого элемента*/
+    /*justify-content: space-between;*/
+
+}
+ .footer__copyright{  
+    text-align: center;
+    padding: 20px;
+    opacity: 0.5;
+}
+ .footer__group{
+   padding-right: 100px;
+   /*padding: 80px, 80px, 80px, 80px; /*top right bottom left*/
+   text-decoration: none;  /* убираем подчеркивание в ссылках*/
+   /*box-shadow: 0 0 10px #444;   /* тень*/
+   
+}
+ .footer__group h3{
+   font-size: 120%;
+   opacity: 0.8;
+   padding-bottom: 20px;
+   /*padding: 80px, 80px, 80px, 80px; /*top right bottom left*/
+}
+
+ .footer__links a{
+   padding-bottom: 15px;
+   
+ }
+ .footer__group a{
+  font-size: 120%;
+  opacity: 0.8;
+  padding-bottom: 20px;
+  text-decoration: none;  /* убираем подчеркивание в ссылках*/
+ 
+
+}
+}
+/**------------------------------------------*/
+
+/* Смартфон ------------------------------------------------*/
+@media (max-width: 1000px) {
+
+  .header__logo {
+      height: 30px;
+  }
+  
+  .header__controls{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap ;  /*  не переносить элекменты*/
+    font-size: 32px;  /* размер шрифта шапки*/
+  }
+  .header__controls a{
+    display: flex;
+    
+    margin-inline: 5% 5%; /* relative to the nearest block container's width */
+    text-decoration: none;  /* убираем подчеркивание в ссылках*/
+  }
+
+  .about {
+      display: flex;
+      flex-direction: column;
+      padding: 30px 30px 30px 40px; /*top right bottom left*/
+  }
+  .about h1 {
+      font-size: 26px;
+      line-height: 40px;
+  }
+  .about ul {
+    font-size: 22px;
+    line-height: 30px;
+    opacity: 0.9; /* прозрачность*/
+  }
+  /* особенности расположения и анимации картинки с солнцем*/
+  .about__first-image {
+    width: 50px;
+    height: 50px;
+    animation-name: rotation;
+    animation-duration: 10s;
+    animation-iteration-count:  infinite;
+    animation-timing-function: linear;
+    animation-fill-mode: backwards;
+    position: absolute;
+  }
+
+  .about__image {
+      width: 50%;
+      border-radius: 5px;
+  }
+
+  
+  .projects {
+    background-color: #fff;
+    padding: 30px 10px 30px 40px;  /*top right bottom left*/
+  }
+  .projects__header{
+    display: flex;
+    flex-direction: column;
+    /*padding: 30px 40px 25px 40px;  /*top right bottom left*/
+   }
+   .projects__header h1{
+    font-size: 26px;
+    line-height: 40px;
+ }
+   .projects__img img {
+    border-radius: 3px;   /*скругление*/
+    box-shadow: 0 0 5px #444;   /* тень*/
+    width: 90%;
+}
+
+ .projects table {
+  border-collapse: collapse; /* Убираем двойные линии */
+  width: 80%; /* Ширина таблицы */
+  border-spacing: 1; /* Расстояние между ячейками */
+  }
+
+  .scale {    /*увеличение картинки при наведении курсора*/
+    transition: 1s; /* Время эффекта */
+   }
+   .scale:hover {   /*увеличение картинки при наведении курсора*/
+    transform: scale(4) ; /* Увеличиваем масштаб */
+    transform-origin: left; /*смещаем вправо после увеличения*/
+   }
+
+   .scale__right {    /*увеличение картинки при наведении*/
+    transition: 1s; /* Время эффекта */
+   }
+   .scale__right:hover {   /*увеличение картинки при наведении курсора*/
+    transform: scale(4) ; /* Увеличиваем масштаб */
+    /*transform-origin: right;/* смещаем влево после увеличения*/
+    transform-origin: 100px 50px; /* смещаем влево вверх после увеличения*/
+   }
+
+   footer{
+    font-size: 22px;
+    /*padding: 200px,20px,90px,20px; /*top right bottom left*/
+    font-weight:600;
+  }
+  .footer__container{
+    display: flex;  
+    justify-content: center; 
+    flex-direction: column;
+    align-items: center;
+    padding-top: 200px;
+  }
+  .footer__copyright{  
+    text-align: center;
+    padding: 40px;
+    opacity: 0.5;
+  }
+  .footer__group{
+    /*padding: 200px, 80px, 80px, 80px; /*top right bottom left*/
+    text-decoration: none;  /* убираем подчеркивание в ссылках*/
+    text-align: center;
+  }
+  .footer__group h3{
+    font-size: 120%;
+    opacity: 0.8;
+    padding-bottom: 10px;
+    /*padding: 80px, 80px, 80px, 80px; /*top right bottom left*/
+    text-align: center;
+  }
+  
+  .footer__group a{
+    font-size: 120%;
+    opacity: 0.8;
+    padding-bottom: 10px;
+    text-align: center;
+  }
+  .footer__links a{
+    font-size: 26px;
+    padding-top: 100px;
+    text-align: center;
+    text-decoration: none;  /* убираем подчеркивание в ссылках*/
+  }
+}  
+/**---------------------------------------------*/
+
+body {
+    margin: 0;
+    font-family: 'Tahoma' tahoma;
+    color: #090d18;
+} 
+ header{
+    position: sticky; /* фиксируем на месте*/
+    padding: 10px;  /*внутренние отступы*/
+    display: flex;
+    /*flex-direction: row;*/
+    /*justify-content: left; /* space-between;*/
+    align-items: center;
+    /*text-align: left;*/
+    color: #040608;
+    top: 0;
+    background-color: white;
+    z-index: 1; /* шапка выше всех  зрителю*/ 
+  }
+
+  ul {
+    /*margin-left: -1em;*/
+      list-style-image: url(img/img_pensil_small.png); /* Путь к изображению маркера списка */
+   }
+   li {
+    padding-left: 20px; /* Смещаем текст вправо */ 
+   }
+ 
+
+/*
+  nav span{
+    margin-left: 20px;
+  }*/
+  
+ /* аниимация солнца*/   
+  @keyframes rotation {
+    0% {
+        transform:rotate(0deg);
+    }
+    100% {
+        transform:rotate(360deg);
+    }
+}
+
+
+
+
